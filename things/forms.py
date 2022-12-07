@@ -4,7 +4,7 @@
 from django import forms
 from .models import Thing
 
-class ThingForm(forms.Form):
+class ThingForm(forms.ModelForm):
 	
     class Meta:
         model = Thing
