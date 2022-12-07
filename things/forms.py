@@ -9,15 +9,9 @@ class ThingForm(forms.ModelForm):
     class Meta:
         model = Thing
         fields=["name","description","quantity"]
-
-    name=forms.CharField(
-        label="name",
-    )
-
-    description=forms.CharField(
-        label="description",
-        widget = forms.Textarea(),
-    )
+        widgets ={
+        'description':forms.Textarea()
+        }
 
     quantity=forms.IntegerField(
         widget = forms.NumberInput(),
